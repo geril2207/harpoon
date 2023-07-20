@@ -159,7 +159,7 @@ function M.get_index_of(item, marks)
         local relative_item = utils.normalize_path(item)
 
         if vim.fn.has("win32") == 1 then
-            relative_path = string.gsub(relative_path, "/", "\\")
+            relative_item = string.gsub(relative_item, "/", "\\")
         end
 
         if marks == nil then
